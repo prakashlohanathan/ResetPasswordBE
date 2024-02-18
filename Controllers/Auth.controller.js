@@ -65,7 +65,7 @@ AuthRouter.post('/forgot-password', async (req, res) => {
       expiresIn: '15m',
     });
 
-    const resetLink = `http://localhost:3000/reset-password?id=${user._id}&token=${token}`;
+    const resetLink = `https://prakash-hallbooking.netlify.app/reset-password?id=${user._id}&token=${token}`;
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
